@@ -30,4 +30,4 @@ Tunely is a simple and sleek music app built with React Native.
    ```
 
 ## License
-MIT License[LICENSE]
+[MIT License](LICENSE)
