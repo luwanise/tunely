@@ -31,3 +31,6 @@ Tunely is a simple and sleek music app built with React Native.
 
 ## License
 [MIT License](LICENSE)
+
+## Image Credits
+Photo by ANTONI SHKRABA production: https://www.pexels.com/photo/a-band-performing-8044223/
