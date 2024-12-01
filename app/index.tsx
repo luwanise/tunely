@@ -1,8 +1,10 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { Colors } from "@/assets/Colors";
 import { useAudioFiles } from "@/hooks/useAudioFiles";
 import HomeHeaderImage from "@/components/HomeHeaderImage";
+import MusicItem from "@/components/MusicItem";
+import { useState } from "react";
 
 export default function Index() {
 
@@ -17,9 +19,8 @@ export default function Index() {
         <FlatList
           data={audioFiles}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => 
-            <Text>{item.filename}</Text>
-          }
+          renderItem={({item}) => <MusicItem item={item}/> }
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
