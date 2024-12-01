@@ -15,6 +15,5 @@ export function useAudioFiles() {
         loadAudioFiles();
     }, []);
 
-    console.log(audioFiles);
     return audioFiles;
 }

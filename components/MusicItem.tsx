@@ -2,6 +2,7 @@ import { Colors } from "@/assets/Colors";
 import { Audio } from "@/models/Audio";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import MusicItemMenu from "./MusicItemMenu";
+import { router } from "expo-router";
 
 interface MusicItemProps {
     item: Audio
@@ -10,7 +11,16 @@ interface MusicItemProps {
 export default function MusicItem({item}: MusicItemProps) {
 
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity
+            style={styles.container}
+            onPress={() => router.push({
+                pathname: "/MusicPlayer",
+                params: {
+                    filename: item.filename.toString(),
+                    uri: item.uri.toString()
+                }
+            })}
+        >
             <Image style={styles.image} source={require("../assets/images/singing silhouette.png")}/>
             <View style={styles.musicDetailsContainer}>
                 <Text style={styles.filename}>{item.filename}</Text>
